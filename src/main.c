@@ -59,6 +59,8 @@ static void tcp_received_cb (
         return;
     }
 
+    net_pkt_unref(pkt);
+
     LOG_INF("TCP RX [%d]: %s", reply_len, rx_buf);
 }
 
